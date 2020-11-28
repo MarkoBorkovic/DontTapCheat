@@ -11,7 +11,7 @@ bool checkPixelGrey(int x, int y) {
 	int r = GetRValue(color);
 	int g = GetGValue(color);
 	int b = GetBValue(color);
-	return r != 255 && r!=187 && r!=68 && r < 230;
+	return r == g && r == b && g == b && r != 255;
 }
 
 int main() {
