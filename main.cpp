@@ -11,7 +11,7 @@ bool checkPixelGrey(int x, int y) {
 	int r = GetRValue(color);
 	int g = GetGValue(color);
 	int b = GetBValue(color);
-	return r == g && r == b && g == b && r != 255;
+	return r != 255 && r!=187 && r!=68 && r < 230;
 }
 
 int main() {
@@ -22,7 +22,7 @@ int main() {
 	int clicked = 0;
 	std::cout << "Choose your coordinates(up arrow): " << std::endl;
 
-	while (clicked < 2) {	
+	while (clicked < 2) {
 		if (GetAsyncKeyState(VK_UP) < 0) {
 			GetCursorPos(&resPoints[clicked++]);
 			std::cout << "click" << std::endl;
